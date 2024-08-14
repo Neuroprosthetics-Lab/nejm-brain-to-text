@@ -13,6 +13,12 @@ Sergey D. Stavisky*, and David M. Brandman*.
 
 ![Speech neuroprosthesis overview](b2txt_methods_overview.png)
 
+<p style="text-align: center;">
+<span style="font-size:2.5em;">
+🚧🚧🚧 Work in progress! This repository is currently under construction and will grow over the next few days. Please check back soon for the full code and data. 🚧🚧🚧
+</span>
+</p>
+
 ## Overview
 This repository contains the code and data necessary to reproduce the results of the paper "*An Accurate and Rapidly Calibrating Speech Neuroprosthesis*" by Card et al. (2024), *N Eng J Med*.
 
