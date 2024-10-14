@@ -1,10 +1,3 @@
-<p style="text-align: center;">
-<span style="font-size:2.5em;">
-🚧🚧🚧 Work in progress! This repository is currently under construction and will grow over the next few days. Please check back soon for the full code and data. 🚧🚧🚧
-</span>
-</p>
-
-
 # An Accurate and Rapidly Calibrating Speech Neuroprosthesis
 *The New England Journal of Medicine* (2024)
 
@@ -22,14 +15,14 @@ Sergey D. Stavisky*, and David M. Brandman*.
 
 <p style="text-align: center;">
 <span style="font-size:2.5em;">
-🚧🚧🚧 Work in progress! This repository is currently under construction and will grow over the next few days. Please check back soon for the full code and data. 🚧🚧🚧
+🚧🚧🚧 Additional data will be added over the next couple months to generate additional supplemental figures. Simulated data will also be added to demonstrate the decoder training and finetuning pipeline. Real neural data will be added in 2025. 🚧🚧🚧
 </span>
 </p>
 
 ## Overview
 This repository contains the code and data necessary to reproduce the results of the paper "*An Accurate and Rapidly Calibrating Speech Neuroprosthesis*" by Card et al. (2024), *N Eng J Med*.
 
-The code is written in Python, and the data can be downloaded from Dryad, [here](https://google.com). Please download this data and place it in the `data` directory before running the code.
+The code is written in Python, and the data can be downloaded from Dryad, [here](https://datadryad.org/stash/dataset/doi:10.5061/dryad.dncjsxm85). Please download this data and place it in the `data` directory before running the code.
 
 Data is currently limited to what is necessary to reproduce the results in the paper, plus some additional simulated neural data that can be used to demonstrate the model training pipeline. A few language models of varying size and computational resource requirements are also included. We intend to share real neural data in the coming months.
 
