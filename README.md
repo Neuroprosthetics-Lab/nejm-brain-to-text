@@ -13,18 +13,12 @@ Sergey D. Stavisky*, and David M. Brandman*.
 
 ![Speech neuroprosthesis overview](b2txt_methods_overview.png)
 
-<p style="text-align: center;">
-<span style="font-size:2.5em;">
-🚧🚧🚧 Additional data will be added over the next couple months to generate additional supplemental figures. Simulated data will also be added to demonstrate the decoder training and finetuning pipeline. Real neural data will be added in 2025. 🚧🚧🚧
-</span>
-</p>
-
 ## Overview
 This repository contains the code and data necessary to reproduce the results of the paper "*An Accurate and Rapidly Calibrating Speech Neuroprosthesis*" by Card et al. (2024), *N Eng J Med*.
 
 The code is written in Python, and the data can be downloaded from Dryad, [here](https://datadryad.org/stash/dataset/doi:10.5061/dryad.dncjsxm85). Please download this data and place it in the `data` directory before running the code.
 
-Data is currently limited to what is necessary to reproduce the results in the paper, plus some additional simulated neural data that can be used to demonstrate the model training pipeline. A few language models of varying size and computational resource requirements are also included. We intend to share real neural data in the coming months.
+Data is currently limited to what is necessary to reproduce the results in the paper, plus some additional simulated neural data that can be used to demonstrate the model training pipeline. A few language models of varying size and computational resource requirements are also included. We intend to share real neural data in summer 2025.
 
 The code is organized into four main directories: `utils`, `analyses`, `data`, and `model_training`:
 - The `utils` directory contains utility functions used throughout the code.
