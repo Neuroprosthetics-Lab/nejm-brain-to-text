@@ -27,7 +27,7 @@ The code is organized into four main directories: `utils`, `analyses`, `data`, a
 - The `model_training` directory contains the code necessary to train the brain-to-text model, including the offline model training and an offline simulation of the online finetuning pipeline, and also to run the language model. Note that the data used in the model training pipeline is simulated neural data, as the real neural data is not yet available.
 
 ## Python environment setup
-The code is written in Python 3.9 and tested on Ubuntu 22.04. We recommend using a conda environment to manage the dependencies.
+The code is written in Python 3.10 and tested on Ubuntu 22.04. We recommend using a conda environment to manage the dependencies.
 
 To install miniconda, follow the instructions [here](https://docs.anaconda.com/miniconda/miniconda-install/).
 
