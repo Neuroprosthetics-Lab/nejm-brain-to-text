@@ -48,7 +48,7 @@ Please download these datasets from [Dryad](https://datadryad.org/stash/dataset/
         sudo apt-get update
         sudo apt-get install redis
         ```
-    - Turn of autorestarting for the redis server in terminal:
+    - Turn off autorestarting for the redis server in terminal:
         - `sudo systemctl disable redis-server`
 - `CMake >= 3.14` and `gcc >= 10.1` are required for the ngram language model installation. You can install these on linux with `sudo apt-get install build-essential`.
 
