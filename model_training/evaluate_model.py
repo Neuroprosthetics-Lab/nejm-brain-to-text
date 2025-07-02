@@ -262,4 +262,9 @@ if eval_type == 'val':
 output_file = os.path.join(model_path, f'baseline_rnn_{eval_type}_predicted_sentences_{time.strftime("%Y%m%d_%H%M%S")}.txt')
 with open(output_file, 'w') as f:
     for i in range(len(lm_results['pred_sentence'])):
-        f.write(f"{remove_punctuation(lm_results['pred_sentence'][i])}\n")
+        if i < len(lm_results['pred_sentence']) - 1:
+            # write sentence + newline
+            f.write(f"{remove_punctuation(lm_results['pred_sentence'][i])}\n")
+        else:
+            # don't add a newline at the end of the last sentence
+            f.write(f"{remove_punctuation(lm_results['pred_sentence'][i])}")

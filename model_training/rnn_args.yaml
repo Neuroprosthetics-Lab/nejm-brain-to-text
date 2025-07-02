@@ -130,7 +130,7 @@ dataset:
   - t15.2025.03.30
   - t15.2025.04.13
   dataset_probability_val: # probability of including a trial in the validation set (0 or 1)
-  - 0
+  - 0 # no val or test data from this day
   - 1
   - 1
   - 1
@@ -158,12 +158,12 @@ dataset:
   - 1
   - 1
   - 1
-  - 0
+  - 0 # no val or test data from this day
   - 1
   - 1
   - 1
-  - 0
-  - 0
+  - 0 # no val or test data from this day
+  - 0 # no val or test data from this day
   - 1
   - 1
   - 1

@@ -23,18 +23,26 @@ The `language-model-standalone.py` script included here is made to work with the
 3. Connect to the `localhost` redis server (or a different server, specified by the `--redis_ip` and `--redis_port` args)
 4. Wait to receive phoneme logits via redis, and then make word predictions and pass them back via redis.
 
+
+### `language-model-standalone.py` input args
+See the bottom of the `language-model-standalone.py` script for a full list of input args.
+
+
+### run a 1gram model
 To run the 1gram language model from the root directory of this repository:
 ```bash
 conda activate b2txt_lm
 python language_model/language-model-standalone.py --lm_path language_model/pretrained_language_models/openwebtext_1gram_lm_sil --do_opt --nbest 100 --acoustic_scale 0.325 --blank_penalty 90 --alpha 0.55 --redis_ip localhost --gpu_number 0
 ```
 
+### run a 3gram model
 To run the 3gram language model from the root directory of this repository (requires ~60GB RAM):
 ```bash
 conda activate b2txt_lm
 python language_model/language-model-standalone.py --lm_path language_model/pretrained_language_models/openwebtext_3gram_lm_sil --do_opt --nbest 100 --acoustic_scale 0.325 --blank_penalty 90 --alpha 0.55 --redis_ip localhost --gpu_number 0
 ```
 
+### run a 5gram model
 To run the 5gram language model from the root directory of this repository (requires ~300GB of RAM):
 ```bash
 conda activate b2txt_lm
