@@ -58,6 +58,8 @@ To create a conda environment with the necessary dependencies, run the following
 ./setup.sh
 ```
 
+Verify it worked by activating the conda environment with the command `conda activate b2txt25`.
+
 ## Python environment setup for ngram language model and OPT rescoring
 We use an ngram language model plus rescoring via the [Facebook OPT 6.7b](https://huggingface.co/facebook/opt-6.7b) LLM. A pretrained 1gram language model is included in this repository at `language_model/pretrained_language_models/openwebtext_1gram_lm_sil`. Pretrained 3gram and 5gram language models are available for download [here](https://datadryad.org/dataset/doi:10.5061/dryad.x69p8czpq) (`languageModel.tar.gz` and `languageModel_5gram.tar.gz`). Note that the 3gram model requires ~60GB of RAM, and the 5gram model requires ~300GB of RAM. Furthermore, OPT 6.7b requires a GPU with at least ~12.4 GB of VRAM to load for inference.
 
@@ -65,3 +67,5 @@ Our Kaldi-based ngram implementation requires a different version of torch than 
 ```bash
 ./setup_lm.sh
 ```
+
+Verify it worked by activating the conda environment with the command `conda activate b2txt25_lm`.

@@ -54,3 +54,7 @@ python setup.py install
 
 # cd back to the root directory
 cd ../../../..
+
+echo
+echo "Setup complete! Verify it worked by activating the conda environment with the command 'conda activate b2txt25_lm'."
+echo

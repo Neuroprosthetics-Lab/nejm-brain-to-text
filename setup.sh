@@ -35,3 +35,7 @@ pip install \
     tokenizers==0.21.2 \
     accelerate==1.8.1 \
     bitsandbytes==0.46.0
+
+echo
+echo "Setup complete! Verify it worked by activating the conda environment with the command 'conda activate b2txt25'."
+echo
