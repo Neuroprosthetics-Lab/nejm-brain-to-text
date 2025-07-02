@@ -18,7 +18,7 @@ This repository contains the code and data necessary to reproduce the results of
 
 The code is written in Python, and the data can be downloaded from Dryad, [here](https://datadryad.org/stash/dataset/doi:10.5061/dryad.dncjsxm85). Please download this data and place it in the `data` directory before running the code. Be sure to unzip `t15_copyTask_neuralData.zip` and `t15_pretrained_rnn_baseline.zip`.
 
-The code is organized into four main directories: `utils`, `analyses`, `data`, and `model_training`:
+The code is organized into five main directories: `utils`, `analyses`, `data`, `model_training`, and `language_model`:
 - The `utils` directory contains utility functions used throughout the code.
 - The `analyses` directory contains the code necessary to reproduce results shown in the main text and supplemental appendix.
 - The `data` directory contains the data necessary to reproduce the results in the paper. Download it from Dryad using the link above and place it in this directory.
