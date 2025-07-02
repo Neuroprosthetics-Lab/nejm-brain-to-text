@@ -29,7 +29,22 @@ The code is organized into five main directories: `utils`, `analyses`, `data`, `
 The data used in this repository consists of various datasets for recreating figures and training/evaluating the brain-to-text model:
 - `t15_copyTask.pkl`: This file contains the online Copy Task results required for generating Figure 2.
 - `t15_personalUse.pkl`: This file contains the Conversation Mode data required for generating Figure 4.
-- `t15_copyTask_neuralData.zip`: This dataset contains the neural data for the Copy Task. There are more than 11,300 sentences from 45 sessions spanning 20 months. The data is split into training, validation, and test sets. Data for each session/split is stored in `.hdf5` files. An example of how to load this data using the Python `h5py` library is provided in the `model_training/evaluate_model_helpers.py` file in the `load_h5py_file()` function.
+- `t15_copyTask_neuralData.zip`: This dataset contains the neural data for the Copy Task.
+    - There are more than 11,300 sentences from 45 sessions spanning 20 months. Each trial of data includes: 
+        - The session date, block number, and trial number
+        - 512 neural features (2 features [-4.5 RMS threshold crossings and spike band power] per electrode, 256 electrodes), binned at 20 ms resolution. The data were recorded from the speech motor cortex via four high-density microelectrode arrays (64 electrodes each). The 512 features are ordered as follows: 
+            - 0-64: ventral 6v threshold crossings
+            - 65-128: area 4 threshold crossings
+            - 129-192: 55b threshold crossings
+            - 193-256: dorsal 6v threshold crossings
+            - 257-320: ventral 6v spike band power
+            - 321-384: area 4 spike band power
+            - 385-448: 55b spike band power
+            - 449-512: dorsal 6v spike band power
+        - The ground truth sentence label
+        - The ground truth phoneme sequence label
+    - The data is split into training, validation, and test sets. The test set does not include ground truth sentence or phoneme labels.
+    - Data for each session/split is stored in `.hdf5` files. An example of how to load this data using the Python `h5py` library is provided in the `model_training/evaluate_model_helpers.py` file in the `load_h5py_file()` function.
 - `t15_pretrained_rnn_baseline.zip`: This dataset contains the pretrained RNN baseline model checkpoint and args. An example of how to load this model and use it for inference is provided in the `model_training/evaluate_model.py` file.
 
 Please download these datasets from [Dryad](https://datadryad.org/stash/dataset/doi:10.5061/dryad.dncjsxm85) and place them in the `data` directory. Be sure to unzip both datasets before running the code.
