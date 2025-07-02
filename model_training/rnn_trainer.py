@@ -57,11 +57,11 @@ class BrainToTextDecoder_Trainer:
 
         # Create output directory
         if args['mode'] == 'train':
-            os.makedirs(self.args['output_dir'], exist_ok=True)
+            os.makedirs(self.args['output_dir'], exist_ok=False)
 
         # Create checkpoint directory
         if args['save_best_checkpoint'] or args['save_all_val_steps'] or args['save_final_model']: 
-            os.makedirs(self.args['checkpoint_dir'], exist_ok = True)
+            os.makedirs(self.args['checkpoint_dir'], exist_ok=False)
 
         # Set up logging
         self.logger = logging.getLogger(__name__)
@@ -82,14 +82,10 @@ class BrainToTextDecoder_Trainer:
         self.logger.addHandler(sh)
 
         # Configure device pytorch will use 
-        if not self.args['distributed_training']:
-            if torch.cuda.is_available():
-                self.device = f"cuda:{self.args['gpu_number']}"
-    
-            else: 
-                self.device = "cpu"
+        if torch.cuda.is_available():
+            self.device = f"cuda:{self.args['gpu_number']}"
         else: 
-            self.device = "cuda"
+            self.device = "cpu"
 
         self.logger.info(f'Using device: {self.device}')
 
@@ -108,7 +104,6 @@ class BrainToTextDecoder_Trainer:
             rnn_dropout = self.args['model']['rnn_dropout'], 
             input_dropout = self.args['model']['input_network']['input_layer_dropout'], 
             n_layers = self.args['model']['n_layers'],
-            bidirectional = self.args['model']['bidirectional'],
             patch_size = self.args['model']['patch_size'],
             patch_stride = self.args['model']['patch_stride'],
         )

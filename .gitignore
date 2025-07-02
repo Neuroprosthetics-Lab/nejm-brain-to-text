@@ -164,4 +164,7 @@ cython_debug/
 # ignore data folder
 data/*
 
+# ignore rdb files
+*.rdb
+
 .DS_Store

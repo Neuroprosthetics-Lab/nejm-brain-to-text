@@ -1,27 +1,37 @@
 #!/bin/bash
-source ~/miniconda3/bin/activate
 
-# Create a new conda environment with the name "tf-gpu" and Python 3.9
-conda create -n tf-gpu python=3.9 -y
+# Ensure conda is available
+source "$(conda info --base)/etc/profile.d/conda.sh"
 
-# Activate the conda environment
-conda activate tf-gpu
+# Create conda environment with Python 3.10
+conda create -n b2txt25 python=3.10 -y
 
-# Install tensorflow-gpu version 2.10.0
-conda install -c conda-forge tensorflow-gpu=2.10.0 -y
+# Activate the new environment
+conda activate b2txt25
 
-# Install numpy, scikit-learn
-conda install numpy==1.26.0 scikit-learn==1.3.0 -y
+# Upgrade pip
+pip install --upgrade pip
 
-# Install omegaconf, pyyaml, redis, matplotlib, jupyter, transformers, g2p_en
-pip install omegaconf==2.3.0 pyyaml==6.0.1 redis==5.0.1 matplotlib==3.8.1 jupyter==1.0.0 transformers==4.35.0 g2p_en==2.1.0 coloredlogs==15.0.1 numba==0.58.1
+# Install PyTorch with CUDA 12.6
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 
-# install punctuation model
-pip install deepmultilingualpunctuation==1.0.1
-
-# install local repository
-pip install -e .
-
-# install lm-decoder
-cd LanguageModelDecoder/runtime/server/x86
-python setup.py install
+# Install additional packages
+# TODO: remove redis
+pip install \
+    redis==5.2.1 \
+    jupyter==1.1.1 \
+    numpy==2.1.2 \
+    matplotlib==3.10.1 \
+    scipy==1.15.2 \
+    scikit-learn==1.6.1 \
+    tqdm==4.67.1 \
+    g2p_en==2.1.0 \
+    h5py==3.13.0 \
+    omegaconf==2.3.0 \
+    editdistance==0.8.1 \
+    -e . \
+    huggingface-hub==0.33.1 \
+    transformers==4.53.0 \
+    tokenizers==0.21.2 \
+    accelerate==1.8.1 \
+    bitsandbytes==0.46.0

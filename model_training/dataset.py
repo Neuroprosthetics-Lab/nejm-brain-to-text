@@ -124,7 +124,7 @@ class BrainToTextDataset(Dataset):
                 for t in index[d]:
                     
                     try: 
-                        g = f[f'trial_{t}']
+                        g = f[f'trial_{t:04d}']
 
                         # Remove features is neccessary 
                         input_features = torch.from_numpy(g['input_features'][:]) # neural data
@@ -277,7 +277,7 @@ def train_test_split_indicies(file_paths, test_percentage = 0.1, seed = -1, bad_
             with h5py.File(path, 'r') as f:
                 num_trials = len(list(f.keys()))
                 for t in range(num_trials):
-                    key = f'trial_{t}'
+                    key = f'trial_{t:04d}'
                     
                     block_num = f[key].attrs['block_num']
                     trial_num = f[key].attrs['trial_num']
