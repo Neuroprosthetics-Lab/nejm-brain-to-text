@@ -32,7 +32,7 @@ The data used in this repository consists of various datasets for recreating fig
 - `t15_copyTask_neuralData.zip`: This dataset contains the neural data for the Copy Task.
     - There are more than 11,300 sentences from 45 sessions spanning 20 months. Each trial of data includes: 
         - The session date, block number, and trial number
-        - 512 neural features (2 features [-4.5 RMS threshold crossings and spike band power] per electrode, 256 electrodes), binned at 20 ms resolution. The data were recorded from the speech motor cortex via four high-density microelectrode arrays (64 electrodes each). The 512 features are ordered as follows: 
+        - 512 neural features (2 features [-4.5 RMS threshold crossings and spike band power] per electrode, 256 electrodes), binned at 20 ms resolution. The data were recorded from the speech motor cortex via four high-density microelectrode arrays (64 electrodes each). The 512 features are ordered as follows in all data files: 
             - 0-64: ventral 6v threshold crossings
             - 65-128: area 4 threshold crossings
             - 129-192: 55b threshold crossings
@@ -45,6 +45,7 @@ The data used in this repository consists of various datasets for recreating fig
         - The ground truth phoneme sequence label
     - The data is split into training, validation, and test sets. The test set does not include ground truth sentence or phoneme labels.
     - Data for each session/split is stored in `.hdf5` files. An example of how to load this data using the Python `h5py` library is provided in the `model_training/evaluate_model_helpers.py` file in the `load_h5py_file()` function.
+    - Each block of data contains sentences drawn from a range of corpuses (Switchboard, OpenWebText2, a 50-word corpus, a custom frequent-word corpus, and a corpus of random word sequences). Furthermore, the majority of the data is during attempted vocalized speaking, but some of it is during attempted silent speaking.
 - `t15_pretrained_rnn_baseline.zip`: This dataset contains the pretrained RNN baseline model checkpoint and args. An example of how to load this model and use it for inference is provided in the `model_training/evaluate_model.py` file.
 
 Please download these datasets from [Dryad](https://datadryad.org/stash/dataset/doi:10.5061/dryad.dncjsxm85) and place them in the `data` directory. Be sure to unzip both datasets before running the code.
