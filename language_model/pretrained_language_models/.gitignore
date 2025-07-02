@@ -1,0 +1,4 @@
+# ignore everything in this folder except a few things
+*
+!openwebtext_1gram_lm_sil
+!/.gitignore
