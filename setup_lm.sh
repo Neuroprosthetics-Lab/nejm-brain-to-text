@@ -18,6 +18,18 @@ if [ -d "language_model/runtime/server/x86/fc_base" ]; then
     exit 1
 fi
 
+# make sure CMake is installed
+if ! command -v cmake &> /dev/null; then
+    echo "CMake is not installed. Please install CMake >= 3.14 before running this script with 'sudo apt-get install cmake'."
+    exit 1
+fi
+
+# make sure gcc is installed
+if ! command -v gcc &> /dev/null; then
+    echo "GCC is not installed. Please install GCC >= 10.1 before running this script with 'sudo apt-get install build-essential'."
+    exit 1
+fi
+
 # Ensure conda is available
 source "$(conda info --base)/etc/profile.d/conda.sh"
 

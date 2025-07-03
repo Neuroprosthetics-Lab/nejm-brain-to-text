@@ -10,6 +10,7 @@ pytorch == 1.13.1
 To install CMake and gcc on Ubuntu, simply run:
 ```bash
 sudo apt-get install build-essential
+sudo apt-get install cmake
 ```
 
 # Install language model python package

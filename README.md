@@ -66,7 +66,7 @@ Please download these datasets from [Dryad](https://datadryad.org/stash/dataset/
         ```
     - Turn off autorestarting for the redis server in terminal:
         - `sudo systemctl disable redis-server`
-- `CMake >= 3.14` and `gcc >= 10.1` are required for the ngram language model installation. You can install these on linux with `sudo apt-get install build-essential`.
+- `CMake >= 3.14` and `gcc >= 10.1` are required for the ngram language model installation. You can install these on linux with `sudo apt-get install cmake` and `sudo apt-get install build-essential`.
 
 ## Python environment setup for model training and evaluation
 To create a conda environment with the necessary dependencies, run the following command from the root directory of this repository:
