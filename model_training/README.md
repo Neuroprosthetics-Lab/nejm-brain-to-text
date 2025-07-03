@@ -36,6 +36,7 @@ To run the 1gram language model from the root directory of this repository:
 conda activate b2txt25_lm
 python language_model/language-model-standalone.py --lm_path language_model/pretrained_language_models/openwebtext_1gram_lm_sil --do_opt --nbest 100 --acoustic_scale 0.325 --blank_penalty 90 --alpha 0.55 --redis_ip localhost --gpu_number 0
 ```
+If the language model successfully starts and connects to Redis, you should see a message saying "Successfully connected to the redis server" in the Terminal.
 
 ### Evaluate
 Finally, use the `b2txt25` conda environment to run the `evaluate_model.py` script to load the pretrained baseline RNN, use it for inference on the heldout val or test sets to get phoneme logits, pass them through the language model via redis to get word predictions, and then save the predicted sentences to a .txt file in the format required for competition submission. An example output file for the val split can be found at `rnn_baseline_submission_file_valsplit.txt`.
@@ -43,6 +44,7 @@ Finally, use the `b2txt25` conda environment to run the `evaluate_model.py` scri
 conda activate b2txt25
 python evaluate_model.py --model_path ../data/t15_pretrained_rnn_baseline --data_dir ../data/hdf5_data_final --eval_type test --gpu_number 1
 ```
+If the script runs successfully, it will save the predicted sentences to a text file named `baseline_rnn_{eval_type}_predicted_sentences_YYYYMMDD_HHMMSS.txt` in the pretrained model's directory (`/data/t15_pretrained_rnn_baseline`). The `eval_type` can be set to either `val` or `test`, depending on which dataset you want to evaluate.
 
 ### Shutdown redis
 When you're done, you can shutdown the redis server from any terminal using `redis-cli shutdown`.
