@@ -81,7 +81,7 @@ dataset:
   test_percentage: 0.1 # percentage of data to use for testing
   feature_subset: null # specific features to include in the dataset
 
-  dataset_dir: ../data/t15_copyTask_neuralData # directory containing the dataset
+  dataset_dir: ../data/hdf5_data_final # directory containing the dataset
   bad_trials_dict: null # dictionary of bad trials to exclude from the dataset
   sessions: # list of sessions to include in the dataset
   - t15.2023.08.11

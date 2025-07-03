@@ -16,8 +16,6 @@ Sergey D. Stavisky*, and David M. Brandman*.
 ## Overview
 This repository contains the code and data necessary to reproduce the results of the paper ["*An Accurate and Rapidly Calibrating Speech Neuroprosthesis*" by Card et al. (2024), *N Eng J Med*](https://www.nejm.org/doi/full/10.1056/NEJMoa2314132).
 
-The code is written in Python, and the data can be downloaded from Dryad, [here](https://datadryad.org/stash/dataset/doi:10.5061/dryad.dncjsxm85). Please download this data and place it in the `data` directory before running the code. Be sure to unzip `t15_copyTask_neuralData.zip` and `t15_pretrained_rnn_baseline.zip`.
-
 The code is organized into five main directories: `utils`, `analyses`, `data`, `model_training`, and `language_model`:
 - The `utils` directory contains utility functions used throughout the code.
 - The `analyses` directory contains the code necessary to reproduce results shown in the main text and supplemental appendix.
@@ -26,7 +24,8 @@ The code is organized into five main directories: `utils`, `analyses`, `data`, `
 - The `language_model` directory contains the ngram language model implementation and a pretrained 1gram language model. Pretrained 3gram and 5gram language models can be downloaded [here](https://datadryad.org/dataset/doi:10.5061/dryad.x69p8czpq) (`languageModel.tar.gz` and `languageModel_5gram.tar.gz`). See [`language_model/README.md`](language_model/README.md) for more information.
 
 ## Data
-The data used in this repository consists of various datasets for recreating figures and training/evaluating the brain-to-text model:
+### Data Overview
+The data used in this repository (which can be downloaded from [Dryad](https://datadryad.org/stash/dataset/doi:10.5061/dryad.dncjsxm85)) consists of various datasets for recreating figures and training/evaluating the brain-to-text model:
 - `t15_copyTask.pkl`: This file contains the online Copy Task results required for generating Figure 2.
 - `t15_personalUse.pkl`: This file contains the Conversation Mode data required for generating Figure 4.
 - `t15_copyTask_neuralData.zip`: This dataset contains the neural data for the Copy Task.
@@ -48,7 +47,26 @@ The data used in this repository consists of various datasets for recreating fig
     - Each block of data contains sentences drawn from a range of corpuses (Switchboard, OpenWebText2, a 50-word corpus, a custom frequent-word corpus, and a corpus of random word sequences). Furthermore, the majority of the data is during attempted vocalized speaking, but some of it is during attempted silent speaking.
 - `t15_pretrained_rnn_baseline.zip`: This dataset contains the pretrained RNN baseline model checkpoint and args. An example of how to load this model and use it for inference is provided in the [`model_training/evaluate_model.py`](model_training/evaluate_model.py) file.
 
-Please download these datasets from [Dryad](https://datadryad.org/stash/dataset/doi:10.5061/dryad.dncjsxm85) and place them in the `data` directory. Be sure to unzip both datasets before running the code.
+### Data Directory Structure
+Please download these datasets from [Dryad](https://datadryad.org/stash/dataset/doi:10.5061/dryad.dncjsxm85) and place them in the `data` directory. Be sure to unzip `t15_copyTask_neuralData.zip` and place the resulting `hdf5_data_final` folder into the `data` directory. Likewise, unzip `t15_pretrained_rnn_baseline.zip` and place the resulting `t15_pretrained_rnn_baseline` folder into the `data` directory. The final directory structure should look like this:
+```
+data/
+├── t15_copyTask.pkl
+├── t15_personalUse.pkl
+├── hdf5_data_final/
+│   ├── t15.2023.08.11/
+│   │   ├── data_train.hdf5
+│   ├── t15.2023.08.13/
+│   │   ├── data_train.hdf5
+│   │   ├── data_val.hdf5
+│   │   ├── data_test.hdf5
+│   ├── ...
+├── t15_pretrained_rnn_baseline/
+│   ├── checkpoint/
+│   │   ├── args.yaml
+│   │   ├── best_checkpoint
+│   ├── training_log
+```
 
 ## Dependencies
 - The code has only been tested on Ubuntu 22.04 with two NVIDIA RTX 4090 GPUs.
