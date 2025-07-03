@@ -14,7 +14,7 @@ sudo apt-get install cmake
 ```
 
 # Install language model python package
-Use the `setup_lm.sh` script in the root directory of this repository to create the `b2txt_lm` conda env and install the `lm-decoder` package to it. Before install, make sure that there is no `build` or `fc_base` directory in your [`runtime/server/x86`](runtime/server/x86) directory, as this may cause the build to fail.
+Use the `setup_lm.sh` script in the root directory of this repository to create the `b2txt25_lm` conda env and install the `lm-decoder` package to it. Before install, make sure that there is no `build` or `fc_base` directory in your [`runtime/server/x86`](runtime/server/x86) directory, as this may cause the build to fail.
 
 
 # Using a pretrained ngram language model
@@ -32,21 +32,21 @@ See the bottom of the `language-model-standalone.py` script for a full list of i
 ### run a 1gram model
 To run the 1gram language model from the root directory of this repository:
 ```bash
-conda activate b2txt_lm
+conda activate b2txt25_lm
 python language_model/language-model-standalone.py --lm_path language_model/pretrained_language_models/openwebtext_1gram_lm_sil --do_opt --nbest 100 --acoustic_scale 0.325 --blank_penalty 90 --alpha 0.55 --redis_ip localhost --gpu_number 0
 ```
 
 ### run a 3gram model
 To run the 3gram language model from the root directory of this repository (requires ~60GB RAM):
 ```bash
-conda activate b2txt_lm
+conda activate b2txt25_lm
 python language_model/language-model-standalone.py --lm_path language_model/pretrained_language_models/openwebtext_3gram_lm_sil --do_opt --nbest 100 --acoustic_scale 0.325 --blank_penalty 90 --alpha 0.55 --redis_ip localhost --gpu_number 0
 ```
 
 ### run a 5gram model
 To run the 5gram language model from the root directory of this repository (requires ~300GB of RAM):
 ```bash
-conda activate b2txt_lm
+conda activate b2txt25_lm
 python language_model/language-model-standalone.py --lm_path language_model/pretrained_language_models/openwebtext_5gram_lm_sil --rescore --do_opt --nbest 100 --acoustic_scale 0.325 --blank_penalty 90 --alpha 0.55 --redis_ip localhost --gpu_number 0
 ```
 
