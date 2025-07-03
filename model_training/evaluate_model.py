@@ -154,10 +154,14 @@ for session, data in test_data.items():
 # make sure that the standalone language model is running on the localhost redis ip
 # see README.md for instructions on how to run the language model
 r = redis.Redis(host='localhost', port=6379, db=0)
+r.flushall()  # clear all streams in redis
+
+# define redis streams for the remote language model
 remote_lm_input_stream = 'remote_lm_input'
 remote_lm_output_partial_stream = 'remote_lm_output_partial'
 remote_lm_output_final_stream = 'remote_lm_output_final'
 
+# set timestamps for last entries seen in the redis streams
 remote_lm_output_partial_lastEntrySeen = get_current_redis_time_ms(r)
 remote_lm_output_final_lastEntrySeen = get_current_redis_time_ms(r)
 remote_lm_done_resetting_lastEntrySeen = get_current_redis_time_ms(r)

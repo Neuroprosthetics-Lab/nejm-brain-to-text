@@ -450,20 +450,20 @@ def main(args):
     # create a nice dict of params to put into redis
     lm_args = {
         'lm_path': lm_path,
-        'max_active': max_active,
-        'min_active': min_active,
-        'beam': beam,
-        'lattice_beam': lattice_beam,
-        'acoustic_scale': acoustic_scale,
-        'ctc_blank_skip_threshold': ctc_blank_skip_threshold,
-        'length_penalty': length_penalty,
-        'nbest': nbest,
-        'blank_penalty': blank_penalty,
-        'alpha': alpha,
-        'do_opt': do_opt,
-        'rescore': rescore,
-        'top_candidates_to_augment': top_candidates_to_augment,
-        'score_penalty_percent': score_penalty_percent,
+        'max_active': int(max_active),
+        'min_active': int(min_active),
+        'beam': float(beam),
+        'lattice_beam': float(lattice_beam),
+        'acoustic_scale': float(acoustic_scale),
+        'ctc_blank_skip_threshold': float(ctc_blank_skip_threshold),
+        'length_penalty': float(length_penalty),
+        'nbest': int(nbest),
+        'blank_penalty': float(blank_penalty),
+        'alpha': float(alpha),
+        'do_opt': int(do_opt),
+        'rescore': int(rescore),
+        'top_candidates_to_augment': int(top_candidates_to_augment),
+        'score_penalty_percent': float(score_penalty_percent),
     }
 
     # pick GPU
@@ -671,7 +671,6 @@ def main(args):
                     blank_penalty = float(entry_data.get(b'blank_penalty', blank_penalty))
                     alpha = float(entry_data.get(b'alpha', alpha))
                     do_opt = int(entry_data.get(b'do_opt', do_opt))
-                    # opt_cache_dir = entry_data.get(b'opt_cache_dir', opt_cache_dir).decode()
                     rescore = int(entry_data.get(b'rescore', rescore))
                     top_candidates_to_augment = int(entry_data.get(b'top_candidates_to_augment', top_candidates_to_augment))
                     score_penalty_percent = float(entry_data.get(b'score_penalty_percent', score_penalty_percent))
@@ -679,21 +678,20 @@ def main(args):
                     # make sure that the update remote lm args are put into redis nicely
                     lm_args = {
                         'lm_path': lm_path,
-                        'max_active': max_active,
-                        'min_active': min_active,
-                        'beam': beam,
-                        'lattice_beam': lattice_beam,
-                        'acoustic_scale': acoustic_scale,
-                        'ctc_blank_skip_threshold': ctc_blank_skip_threshold,
-                        'length_penalty': length_penalty,
-                        'nbest': nbest,
-                        'blank_penalty': blank_penalty,
-                        'alpha': alpha,
-                        'do_opt': do_opt,
-                        # 'opt_cache_dir': opt_cache_dir,
-                        'rescore': rescore,
-                        'top_candidates_to_augment': top_candidates_to_augment,
-                        'score_penalty_percent': score_penalty_percent,
+                        'max_active': int(max_active),
+                        'min_active': int(min_active),
+                        'beam': float(beam),
+                        'lattice_beam': float(lattice_beam),
+                        'acoustic_scale': float(acoustic_scale),
+                        'ctc_blank_skip_threshold': float(ctc_blank_skip_threshold),
+                        'length_penalty': float(length_penalty),
+                        'nbest': int(nbest),
+                        'blank_penalty': float(blank_penalty),
+                        'alpha': float(alpha),
+                        'do_opt': int(do_opt),
+                        'rescore': int(rescore),
+                        'top_candidates_to_augment': int(top_candidates_to_augment),
+                        'score_penalty_percent': float(score_penalty_percent),
                     }
                     r.xadd('remote_lm_args', lm_args)
                     
