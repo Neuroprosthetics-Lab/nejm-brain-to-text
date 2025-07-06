@@ -1,0 +1,6 @@
+bin
+lib
+include
+*.o
+Dependencies.i686-m64
+*.a
