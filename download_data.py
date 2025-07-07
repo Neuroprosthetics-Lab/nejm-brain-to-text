@@ -104,7 +104,7 @@ def main():
             with zipfile.ZipFile(download_to_filepath, "r") as zf:
                 zf.extractall(data_dirpath)
 
-    print(f"Download complete. See data files in {data_dirpath}\n")
+    print(f"\nDownload complete. See data files in {data_dirpath}\n")
 
 
 if __name__ == "__main__":
