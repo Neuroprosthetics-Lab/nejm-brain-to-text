@@ -633,7 +633,16 @@ def main(args):
                 elif len(ngramDecoder.result()) > 0:
                     # Otherwise just output the best sentence
                     decoded_final = ngramDecoder.result()[0].sentence
-                    nbest_redis = ''
+                    
+                    # create nbest_redis with 0 values for LLM score
+                    nbest_redis = []
+                    for i in range(len(nbest_out)):
+                        sentence = nbest_out[i][0].strip()
+                        ac_score = nbest_out[i][1]
+                        lm_score = nbest_out[i][2]
+                        llm_score = 0.0
+                        total_score = acoustic_scale * ac_score + lm_score
+                        nbest_redis.append(';'.join(map(str,[sentence, ac_score, lm_score, llm_score, total_score])))
 
                 else:
                     logging.error('No output from language model.')
