@@ -1,0 +1,266 @@
+Date,Post-implant day,Block number,Number of sentences,Corpus,Split
+2023-08-11,25,2,20,50-Word,Train
+2023-08-11,25,3,30,50-Word,Train
+2023-08-11,25,4,40,50-Word,Train
+2023-08-11,25,5,50,50-Word,Train
+2023-08-11,25,6,50,50-Word,Train
+2023-08-11,25,8,50,50-Word,Train
+2023-08-11,25,9,50,50-Word,Train
+2023-08-13,27,1,50,Switchboard,Train
+2023-08-13,27,2,50,Switchboard,Train
+2023-08-13,27,3,40,Switchboard,Train
+2023-08-13,27,4,40,Switchboard,Train
+2023-08-13,27,5,40,Switchboard,Train
+2023-08-13,27,6,40,Switchboard,Train
+2023-08-13,27,7,40,50-Word,Train
+2023-08-13,27,8,40,Switchboard,Val/Test
+2023-08-13,27,9,30,Switchboard,Val/Test
+2023-08-13,27,11,40,50-Word,Train
+2023-08-13,27,12,30,Switchboard,Train
+2023-08-18,32,4,49,Switchboard,Train
+2023-08-18,32,5,48,Switchboard,Train
+2023-08-18,32,6,49,Switchboard,Val/Test
+2023-08-18,32,7,50,Switchboard,Val/Test
+2023-08-18,32,8,50,Switchboard,Train
+2023-08-18,32,9,50,Switchboard,Train
+2023-08-20,34,1,50,Switchboard,Train
+2023-08-20,34,2,49,Switchboard,Train
+2023-08-20,34,3,30,Switchboard,Train
+2023-08-20,34,4,49,Switchboard,Train
+2023-08-20,34,5,50,Switchboard,Train
+2023-08-20,34,6,50,Switchboard,Train
+2023-08-20,34,7,49,Switchboard,Val/Test
+2023-08-20,34,8,48,Switchboard,Val/Test
+2023-08-25,39,1,50,Switchboard,Val/Test
+2023-08-25,39,2,50,Switchboard,Train
+2023-08-25,39,7,39,Switchboard,Train
+2023-08-27,41,1,50,Switchboard,Val/Test
+2023-08-27,41,2,50,Switchboard,Train
+2023-08-27,41,3,50,Switchboard,Train
+2023-08-27,41,5,50,Switchboard,Train
+2023-09-01,46,1,47,Switchboard,Train
+2023-09-01,46,2,50,Switchboard,Train
+2023-09-01,46,3,50,Switchboard,Train
+2023-09-01,46,4,50,Switchboard,Train
+2023-09-01,46,5,50,Switchboard,Train
+2023-09-01,46,6,50,Switchboard,Train
+2023-09-01,46,8,49,Switchboard,Val/Test
+2023-09-01,46,9,50,Switchboard,Val/Test
+2023-09-03,48,1,50,Switchboard,Train
+2023-09-03,48,2,50,Switchboard,Train
+2023-09-03,48,3,50,Switchboard,Train
+2023-09-03,48,4,25,Switchboard,Train
+2023-09-03,48,5,50,Switchboard,Train
+2023-09-03,48,6,48,Switchboard,Train
+2023-09-03,48,7,49,Switchboard,Train
+2023-09-03,48,8,50,Switchboard,Val/Test
+2023-09-03,48,9,19,Switchboard,Val/Test
+2023-09-24,69,1,50,Switchboard,Train
+2023-09-24,69,2,49,Switchboard,Train
+2023-09-24,69,3,20,Switchboard,Train
+2023-09-24,69,4,45,Switchboard,Train
+2023-09-24,69,5,20,Switchboard,Train
+2023-09-24,69,6,11,50-Word,Train
+2023-09-24,69,7,50,Switchboard,Train
+2023-09-24,69,8,20,Switchboard,Val/Test
+2023-09-24,69,9,50,Switchboard,Val/Test
+2023-09-29,74,1,5,Switchboard,Train
+2023-09-29,74,2,50,Switchboard,Train
+2023-09-29,74,3,50,Switchboard,Val/Test
+2023-09-29,74,4,47,Openwebtext,Val/Test
+2023-09-29,74,5,5,Switchboard,Train
+2023-09-29,74,6,20,Switchboard,Train
+2023-09-29,74,7,49,Switchboard,Train
+2023-09-29,74,9,35,Switchboard,Train
+2023-10-01,76,1,10,Switchboard,Train
+2023-10-01,76,2,49,Switchboard,Train
+2023-10-01,76,3,50,Switchboard,Train
+2023-10-01,76,4,50,Switchboard,Train
+2023-10-01,76,5,50,Switchboard,Train
+2023-10-01,76,6,49,Switchboard,Train
+2023-10-01,76,7,49,Switchboard,Val/Test
+2023-10-01,76,8,40,Openwebtext,Val/Test
+2023-10-06,81,1,50,Switchboard,Train
+2023-10-06,81,2,50,Switchboard,Train
+2023-10-06,81,3,10,50-Word,Train
+2023-10-06,81,4,50,Switchboard,Train
+2023-10-06,81,5,16,Switchboard,Train
+2023-10-06,81,6,30,Switchboard,Val/Test
+2023-10-06,81,7,43,Switchboard,Val/Test
+2023-10-08,83,1,50,Switchboard,Train
+2023-10-08,83,2,49,Switchboard,Train
+2023-10-08,83,3,20,Switchboard,Train
+2023-10-08,83,6,50,Switchboard,Train
+2023-10-08,83,7,50,Switchboard,Train
+2023-10-08,83,8,50,Switchboard,Train
+2023-10-08,83,10,15,Switchboard,Train
+2023-10-08,83,11,30,Openwebtext,Val/Test
+2023-10-08,83,12,15,Openwebtext,Val/Test
+2023-10-13,88,1,50,Switchboard,Train
+2023-10-13,88,2,40,Switchboard,Train
+2023-10-13,88,3,15,Switchboard,Train
+2023-10-13,88,4,50,Switchboard,Train
+2023-10-13,88,5,49,Switchboard,Val/Test
+2023-10-13,88,6,40,Random,Val/Test
+2023-10-15,90,1,49,Switchboard,Train
+2023-10-15,90,2,50,Switchboard,Train
+2023-10-15,90,5,50,Switchboard,Train
+2023-10-15,90,6,40,Switchboard,Train
+2023-10-15,90,8,50,Switchboard,Train
+2023-10-15,90,9,49,Switchboard,Val/Test
+2023-10-15,90,10,40,Openwebtext,Val/Test
+2023-10-20,95,1,48,Switchboard,Train
+2023-10-20,95,2,50,Switchboard,Train
+2023-10-20,95,3,18,Harvard,Val/Test
+2023-10-22,97,1,16,Switchboard,Train
+2023-10-22,97,2,50,Switchboard,Train
+2023-10-22,97,4,49,Freq words,Train
+2023-10-22,97,5,30,Harvard,Val/Test
+2023-10-22,97,6,14,Freq words,Train
+2023-10-22,97,7,50,Freq words,Train
+2023-10-22,97,9,50,Switchboard,Val/Test
+2023-11-03,109,1,50,Freq words,Train
+2023-11-03,109,3,50,Freq words,Train
+2023-11-03,109,4,49,Freq words,Train
+2023-11-03,109,5,50,Harvard,Val/Test
+2023-11-03,109,6,50,Switchboard,Val/Test
+2023-11-04,110,1,50,Freq words,Train
+2023-11-04,110,2,30,Freq words,Train
+2023-11-04,110,4,30,Freq words,Val/Test
+2023-11-17,123,1,50,Freq words,Train
+2023-11-17,123,2,50,Freq words,Train
+2023-11-17,123,3,50,Freq words,Val/Test
+2023-11-19,125,2,50,Freq words,Train
+2023-11-19,125,3,10,Freq words,Train
+2023-11-19,125,4,40,Freq words,Val/Test
+2023-11-26,132,1,25,Freq words,Train
+2023-11-26,132,2,24,Freq words,Train
+2023-11-26,132,3,49,Freq words,Train
+2023-11-26,132,5,50,Freq words,Train
+2023-11-26,132,6,50,Freq words,Train
+2023-11-26,132,7,39,Random,Val/Test
+2023-11-26,132,9,50,Freq words,Val/Test
+2023-12-03,139,1,50,Freq words,Train
+2023-12-03,139,2,30,Freq words,Train
+2023-12-03,139,4,48,Switchboard,Val/Test
+2023-12-03,139,5,49,Freq words,Train
+2023-12-03,139,6,49,Freq words,Train
+2023-12-03,139,7,50,Freq words,Train
+2023-12-03,139,8,20,Freq words,Val/Test
+2023-12-08,144,1,50,Freq words,Train
+2023-12-08,144,2,20,Freq words,Train
+2023-12-08,144,3,10,Freq words,Train
+2023-12-08,144,4,20,Freq words,Train
+2023-12-08,144,6,50,Freq words,Train
+2023-12-08,144,7,49,Freq words,Train
+2023-12-08,144,8,50,Freq words,Val/Test
+2023-12-08,144,9,50,Freq words,Val/Test
+2023-12-10,146,1,50,Freq words,Train
+2023-12-10,146,3,50,Freq words,Train
+2023-12-10,146,6,50,Freq words,Train
+2023-12-10,146,7,50,Freq words,Val/Test
+2023-12-17,153,1,50,Freq words,Train
+2023-12-17,153,2,50,Freq words,Train
+2023-12-17,153,10,35,Freq words,Train
+2023-12-17,153,11,50,Freq words,Val/Test
+2023-12-29,165,1,50,Freq words,Train
+2023-12-29,165,2,50,Freq words,Train
+2023-12-29,165,3,48,Freq words,Train
+2023-12-29,165,4,50,Switchboard,Val/Test
+2023-12-29,165,5,50,Freq words,Val/Test
+2023-12-29,165,7,50,Freq words,Train
+2024-02-25,223,1,49,Switchboard,Train
+2024-02-25,223,3,47,Switchboard,Train
+2024-02-25,223,4,50,Switchboard,Train
+2024-02-25,223,5,47,Switchboard,Train
+2024-02-25,223,6,47,Switchboard,Val/Test
+2024-03-03,230,1,19,Switchboard,Train
+2024-03-03,230,3,50,50-Word,Train
+2024-03-03,230,6,50,50-Word,Train
+2024-03-03,230,11,50,50-Word,Train
+2024-03-03,230,13,50,50-Word,Train
+2024-03-08,235,1,18,Switchboard,Train
+2024-03-08,235,3,48,Switchboard,Train
+2024-03-08,235,6,48,Switchboard,Train
+2024-03-08,235,7,49,Switchboard,Train
+2024-03-08,235,8,49,Switchboard,Val/Test
+2024-03-15,242,1,49,Switchboard,Train
+2024-03-15,242,3,50,Switchboard,Train
+2024-03-15,242,4,47,Switchboard,Train
+2024-03-15,242,5,48,Switchboard,Train
+2024-03-15,242,6,37,Switchboard,Train
+2024-03-15,242,7,49,Switchboard,Val/Test
+2024-03-15,242,9,49,Switchboard,Val/Test
+2024-03-17,244,1,50,Switchboard,Train
+2024-03-17,244,3,49,Switchboard,Train
+2024-03-17,244,4,48,Switchboard,Train
+2024-03-17,244,5,50,Switchboard,Train
+2024-03-17,244,6,47,Switchboard,Val/Test
+2024-03-17,244,7,50,Switchboard,Val/Test
+2024-03-17,244,8,49,Switchboard,Train
+2024-04-25,283,2,14,Switchboard,Train
+2024-04-25,283,4,50,50-Word,Train
+2024-04-25,283,5,50,50-Word,Train
+2024-04-25,283,7,50,50-Word,Train
+2024-04-25,283,9,50,50-Word,Train
+2024-04-25,283,11,50,50-Word,Train
+2024-04-25,283,12,50,50-Word,Train
+2024-04-25,283,14,50,50-Word,Train
+2024-04-28,286,1,50,50-Word,Train
+2024-04-28,286,2,50,50-Word,Train
+2024-04-28,286,10,50,50-Word,Train
+2024-05-10,298,1,10,Switchboard,Train
+2024-05-10,298,5,50,Switchboard,Train
+2024-05-10,298,6,50,Switchboard,Train
+2024-05-10,298,7,50,Switchboard,Val/Test
+2024-06-14,333,1,10,Switchboard,Train
+2024-06-14,333,9,20,Switchboard,Train
+2024-06-14,333,11,50,Switchboard,Train
+2024-06-14,333,12,50,Switchboard,Val/Test
+2024-07-19,368,1,10,Switchboard,Train
+2024-07-19,368,4,15,Switchboard,Train
+2024-07-19,368,6,50,Switchboard,Train
+2024-07-19,368,7,48,Switchboard,Train
+2024-07-19,368,8,47,Switchboard,Train
+2024-07-19,368,9,48,Switchboard,Val/Test
+2024-07-19,368,10,49,Switchboard,Val/Test
+2024-07-21,370,1,20,Switchboard,Train
+2024-07-21,370,3,46,Switchboard,Train
+2024-07-21,370,4,46,Switchboard,Train
+2024-07-21,370,5,49,Switchboard,Train
+2024-07-21,370,6,50,Switchboard,Val/Test
+2024-07-21,370,7,47,Switchboard,Val/Test
+2024-07-28,377,1,15,Switchboard,Train
+2024-07-28,377,3,49,Switchboard,Train
+2024-07-28,377,4,49,Switchboard,Train
+2024-07-28,377,5,50,Switchboard,Train
+2024-07-28,377,6,49,Switchboard,Val/Test
+2024-07-28,377,7,48,Switchboard,Val/Test
+2025-01-10,543,1,20,Switchboard,Train
+2025-01-10,543,5,49,Switchboard,Train
+2025-01-10,543,7,47,Switchboard,Train
+2025-01-10,543,8,47,Switchboard,Val/Test
+2025-01-12,545,1,20,Switchboard,Train
+2025-01-12,545,3,50,Switchboard,Train
+2025-01-12,545,4,48,Switchboard,Train
+2025-01-12,545,5,50,Switchboard,Train
+2025-01-12,545,6,48,Switchboard,Val/Test
+2025-01-12,545,7,47,Switchboard,Val/Test
+2025-03-14,606,2,10,Switchboard,Train
+2025-03-14,606,4,25,Switchboard,Val/Test
+2025-03-14,606,6,25,Switchboard,Val/Test
+2025-03-14,606,7,25,Switchboard,Train
+2025-03-14,606,8,24,Switchboard,Train
+2025-03-16,608,1,19,Switchboard,Train
+2025-03-16,608,3,50,Switchboard,Train
+2025-03-16,608,4,49,Switchboard,Train
+2025-03-16,608,5,48,Switchboard,Val/Test
+2025-03-30,622,3,20,Switchboard,Train
+2025-03-30,622,6,48,Switchboard,Train
+2025-03-30,622,8,48,Switchboard,Train
+2025-03-30,622,10,47,Switchboard,Val/Test
+2025-03-30,622,12,49,Switchboard,Train
+2025-03-30,622,13,48,Switchboard,Val/Test
+2025-04-13,636,2,20,Switchboard,Train
+2025-04-13,636,7,50,Switchboard,Train
+2025-04-13,636,8,50,Switchboard,Val/Test

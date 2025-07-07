@@ -1,4 +1,5 @@
-# ignore everything in this folder except my README.md and myself
+# ignore everything in this folder except a few things
 *
 !README.md
 !/.gitignore
+!t15_copyTaskData_description.csv
