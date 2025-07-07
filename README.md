@@ -25,7 +25,7 @@ The code is organized into five main directories: `utils`, `analyses`, `data`, `
 
 ## Data
 ### Data Overview
-The data used in this repository (which can be downloaded from [Dryad](https://datadryad.org/stash/dataset/doi:10.5061/dryad.dncjsxm85)) consists of various datasets for recreating figures and training/evaluating the brain-to-text model:
+The data used in this repository (which can be downloaded from [Dryad](https://datadryad.org/stash/dataset/doi:10.5061/dryad.dncjsxm85), either manually from the website, or using `download_data.py`) consists of various datasets for recreating figures and training/evaluating the brain-to-text model:
 - `t15_copyTask.pkl`: This file contains the online Copy Task results required for generating Figure 2.
 - `t15_personalUse.pkl`: This file contains the Conversation Mode data required for generating Figure 4.
 - `t15_copyTask_neuralData.zip`: This dataset contains the neural data for the Copy Task.
