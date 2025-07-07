@@ -21,6 +21,7 @@ pip install \
     redis==5.2.1 \
     jupyter==1.1.1 \
     numpy==2.1.2 \
+    pandas==2.3.0 \
     matplotlib==3.10.1 \
     scipy==1.15.2 \
     scikit-learn==1.6.1 \

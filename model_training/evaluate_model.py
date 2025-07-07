@@ -1,7 +1,7 @@
 import os
-import sys
 import torch
 import numpy as np
+import pandas as pd
 import redis
 from omegaconf import OmegaConf
 import time
@@ -262,13 +262,8 @@ if eval_type == 'val':
     print(f'Aggregate Word Error Rate (WER): {100 * total_edit_distance / total_true_length:.2f}%')
 
 
-# write predicted sentences to a text file. put a timestamp in the filename (YYYYMMDD_HHMMSS)
-output_file = os.path.join(model_path, f'baseline_rnn_{eval_type}_predicted_sentences_{time.strftime("%Y%m%d_%H%M%S")}.txt')
-with open(output_file, 'w') as f:
-    for i in range(len(lm_results['pred_sentence'])):
-        if i < len(lm_results['pred_sentence']) - 1:
-            # write sentence + newline
-            f.write(f"{remove_punctuation(lm_results['pred_sentence'][i])}\n")
-        else:
-            # don't add a newline at the end of the last sentence
-            f.write(f"{remove_punctuation(lm_results['pred_sentence'][i])}")
+# write predicted sentences to a csv file. put a timestamp in the filename (YYYYMMDD_HHMMSS)
+output_file = os.path.join(model_path, f'baseline_rnn_{eval_type}_predicted_sentences_{time.strftime("%Y%m%d_%H%M%S")}.csv')
+ids = [i for i in range(len(lm_results['pred_sentence']))]
+df_out = pd.DataFrame({'id': ids, 'text': lm_results['pred_sentence']})
+df_out.to_csv(output_file, index=False)
